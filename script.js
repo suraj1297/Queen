@@ -21,10 +21,12 @@ const updateCoordinates = (
   xOperator = "add",
   yOperator = "add"
 ) => {
+
+  // both variables will be updated with new positions
   let xValue = null;
   let yValue = null;
-  // Updates x coordinate
 
+  // Updates x coordinate
   if (xOperator === "add") {
     xValue = queen.position.x + Number.parseInt(xSteps);
   } else if (xOperator === "sub") {
@@ -32,7 +34,6 @@ const updateCoordinates = (
   }
 
   // updates y coordinate
-
   if (yOperator === "add") {
     yValue = queen.position.y + Number.parseInt(ySteps);
   } else if (yOperator === "sub") {
@@ -48,6 +49,9 @@ const updateCoordinates = (
   }
 };
 
+
+// object holds the directions as key and will update the queens position as per the noOfsteps
+// asked for by calling updateCoordinates function hen move function is called.
 const Coordinates = {
   S: {
     fullForm: "South",
